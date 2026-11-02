@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room 2047</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Room 2047</h1>
+  </header>
+
+  <main>
+
+    <!-- Scene 1: Hallway -->
+    <section id="hallway" class="scene">
+      <h2>Third floor hallway</h2>
+      <img src="images/hallway.svg" alt="A dark university hallway with a bulletin board and the door to Room 2047">
+      <p>It is 9:47 PM. You came back for your charger. The building is empty, but the door to Room 2047 is unlocked.</p>
+      <button onclick="readNotice()">Read the bulletin board</button>
+      <p id="noticeText"></p>
+      <button onclick="goTo('classroom')">Go into Room 2047</button>
+    </section>
+
+    <!-- Scene 2: Classroom -->
+    <section id="classroom" class="scene">
+      <h2>Room 2047</h2>
+      <img src="images/classroom.svg" alt="An empty classroom at night with a whiteboard and a box on the desk">
+      <p>An empty classroom. A cardboard box sits on the front desk. The label says "Lost and found. Keep until someone comes."</p>
+      <button onclick="goTo('box')">Open the box</button>
+    </section>
+
+    <!-- Scene 3: Lost and found box -->
+    <section id="box" class="scene">
+      <h2>Lost and found box</h2>
+      <img src="images/box.svg" alt="A box holding a sketchbook, a film camera, a library book and a music box">
+      <p>Four things that nobody came back for. Click each one to look at it.</p>
+      <button onclick="lookAt('sketchbook')">Sketchbook</button>
+      <button onclick="lookAt('camera')">Film camera</button>
+      <button onclick="lookAt('book')">Library book</button>
+      <button onclick="lookAt('musicbox')">Music box</button>
+      <p id="itemText"></p>
+      <p>Items found: <span id="itemCount">0</span> of 4</p>
+      <!-- This button will stay hidden until all 4 items are found!!! :DDD -->
+      <button id="boxNext" class="hidden" onclick="goTo('whiteboard')">Look at the whiteboard</button>
+    </section>
+
+    <!-- Scene 4: Whiteboard -->
+    <section id="whiteboard" class="scene">
+      <h2>The whiteboard</h2>
+      <div class="board">
+        <p><strong>Thursday study group, 9 PM, Room 2047</strong></p>
+        <p>Seats, left to right: Sofia, Daniel, Mira, Theo</p>
+        <p class="red">To whoever comes back: my office code is your claim numbers, in the order you sat. H.</p>
+      </div>
+      <p>Your notes:</p>
+      <ul>
+        <li>Mira: claim #1</li>
+        <li>Daniel: claim #3</li>
+        <li>Sofia: claim #7</li>
+        <li>Theo: claim #9</li>
+      </ul>
+      <button onclick="goTo('office')">Go to the office door</button>
+    </section>
+
+    <!-- Scene 5: Office -->
+    <section id="office" class="scene">
+      <h2>Office 2049</h2>
+      <p>The door is locked. Enter the 4 digit code.</p>
+      <input type="text" id="codeInput" maxlength="4" placeholder="0000">
+      <button onclick="checkCode()">Enter</button>
+      <p id="codeText"></p>
+
+      <!-- This part stays hidden until the code is right -->
+      <div id="officeInside" class="hidden">
+        <img src="images/office.svg" alt="A small office with a desk lamp and a letter">
+        <div class="letter">
+          <p>To whoever comes back for these,</p>
+          <p>On March 12, 2020, four of my students left this room and said "see you next week." The next morning the campus closed. Nobody came back. Please take care of the box.</p>
+          <p>H. Hollis</p>
+        </div>
+        <p><strong>Do you take the box home?</strong></p>
+        <button onclick="choose('yes')">Yes, take it</button>
+        <button onclick="choose('no')">No, leave it here</button>
+      </div>
+    </section>
+
+    <!-- Scene 6: Ending -->
+    <section id="ending" class="scene">
+      <h2>The end</h2>
+      <p id="choiceText"></p>
+      <p>The study group never met again, but someone finally came back for their things. Thanks for playing.</p>
+      <button onclick="location.reload()">Play again</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

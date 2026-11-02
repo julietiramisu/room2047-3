@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background-color: #141a2e;
+  color: #e8e6f0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  padding: 10px 20px;
+  background-color: #1c2340;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #f2b35b;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* All scenes will start as hidden. each scene the script.js will show one at a time :DDD */
+.scene {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  margin: 5px 5px 5px 0;
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #f2b35b;
+  color: #141a2e;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0735a;
+  color: white;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  width: 100px;
+  border-radius: 6px;
+  border: none;
+}
+
+.board {
+  background-color: #eef0f2;
+  color: #2b3350;
+  padding: 15px 20px;
+  border: 8px solid #9aa0b5;
+  border-radius: 8px;
+}
+
+.red {
+  color: #c8462f;
+  font-weight: bold;
+}
+
+.letter {
+  background-color: #f3ead8;
+  color: #22263a;
+  padding: 15px 20px;
+  margin: 15px 0;
+  border-radius: 6px;
+}
+
+/* Phones: this can be use for phone too :PPPP. the buttons fill the width */
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+}

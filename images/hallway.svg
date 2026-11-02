@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+          <defs>
+            <linearGradient id="hwWall" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#232b47"/><stop offset="1" stop-color="#171d33"/>
+            </linearGradient>
+            <linearGradient id="hwFloor" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#12172a"/><stop offset="1" stop-color="#0b0f1d"/>
+            </linearGradient>
+            <radialGradient id="doorGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#f2b35b" stop-opacity="0.55"/><stop offset="1" stop-color="#f2b35b" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1600" height="900" fill="url(#hwWall)"/>
+          <!-- ceiling lights -->
+          <g fill="#f3ead8" opacity="0.18">
+            <rect x="180" y="40" width="300" height="14" rx="7"/>
+            <rect x="660" y="40" width="300" height="14" rx="7"/>
+            <rect x="1140" y="40" width="300" height="14" rx="7"/>
+          </g>
+          <rect x="0" y="0" width="1600" height="70" fill="#0f1427" opacity="0.6"/>
+          <!-- baseboard + floor -->
+          <rect x="0" y="770" width="1600" height="16" fill="#0d1120"/>
+          <rect x="0" y="786" width="1600" height="114" fill="url(#hwFloor)"/>
+          <g stroke="#1d2440" stroke-width="2">
+            <line x1="0" y1="820" x2="1600" y2="820"/><line x1="0" y1="860" x2="1600" y2="860"/>
+            <line x1="200" y1="786" x2="120" y2="900"/><line x1="600" y1="786" x2="560" y2="900"/>
+            <line x1="1000" y1="786" x2="1040" y2="900"/><line x1="1400" y1="786" x2="1480" y2="900"/>
+          </g>
+          <!-- light spill under door -->
+          <ellipse cx="1020" cy="800" rx="260" ry="40" fill="url(#doorGlow)"/>
+
+          <!-- bulletin board (hotspot) -->
+          <g>
+            
+            <rect x="250" y="280" width="400" height="280" rx="6" fill="#7a5a3e"/>
+            <rect x="250" y="280" width="400" height="280" rx="6" fill="none" stroke="#4a3624" stroke-width="10"/>
+            <g>
+              <rect x="285" y="310" width="110" height="140" fill="#e9e1cf" transform="rotate(-4 340 380)"/>
+              <rect x="420" y="300" width="96" height="120" fill="#c9d8e6" transform="rotate(3 468 360)"/>
+              <rect x="530" y="320" width="90" height="100" fill="#efe3a8" transform="rotate(-2 575 370)"/>
+              <rect x="400" y="430" width="190" height="110" fill="#f3ead8"/>
+              <rect x="400" y="430" width="190" height="26" fill="#e0735a"/>
+              <text x="495" y="449" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#fff">NOTICE</text>
+              <g fill="#9aa0b5"><rect x="415" y="470" width="160" height="6"/><rect x="415" y="486" width="140" height="6"/><rect x="415" y="502" width="150" height="6"/></g>
+              <circle cx="495" cy="434" r="5" fill="#2b3350"/>
+              <circle cx="340" cy="314" r="5" fill="#e0735a"/><circle cx="468" cy="304" r="5" fill="#f2b35b"/><circle cx="575" cy="324" r="5" fill="#6fa58b"/>
+            </g>
+          </g>
+
+          <!-- door to 2047 (hotspot) -->
+          <g>
+            
+            <rect x="880" y="230" width="280" height="540" fill="#0e1222"/>
+            <rect x="896" y="244" width="248" height="526" fill="#2b3350"/>
+            <rect x="950" y="290" width="140" height="190" rx="4" fill="#f2b35b" opacity="0.85"/>
+            <g stroke="#2b3350" stroke-width="6"><line x1="1020" y1="290" x2="1020" y2="480"/><line x1="950" y1="385" x2="1090" y2="385"/></g>
+            <rect x="1100" y="520" width="26" height="12" rx="6" fill="#9aa0b5"/>
+            <rect x="960" y="182" width="120" height="36" rx="6" fill="#0e1222"/>
+            <text x="1020" y="208" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#f2b35b">2047</text>
+          </g>
+
+          <!-- door to 2049 (flavor) -->
+          <g>
+            
+            <rect x="1310" y="262" width="200" height="508" fill="#0e1222"/>
+            <rect x="1322" y="274" width="176" height="496" fill="#262d47"/>
+            <rect x="1350" y="216" width="120" height="34" rx="6" fill="#0e1222"/>
+            <text x="1410" y="241" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#9aa0b5">2049</text>
+            <rect x="1460" y="520" width="22" height="34" rx="4" fill="#3d4566"/>
+            <circle cx="1471" cy="530" r="3" fill="#e0735a"/>
+          </g>
+
+          <!-- water fountain (flavor) -->
+          <g>
+            
+            <rect x="712" y="600" width="96" height="40" rx="8" fill="#9aa0b5"/>
+            <rect x="740" y="640" width="40" height="130" fill="#3d4566"/>
+            <rect x="720" y="562" width="80" height="34" rx="4" fill="#e9e1cf"/>
+            <text x="760" y="585" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2b3350">REFILL</text>
+          </g>
+        </svg>
